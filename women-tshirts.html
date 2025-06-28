@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jeans - Women</title>
+  <title>T-Shirts - Women</title>
   <link rel="stylesheet" href="buy-section.css">
     <link rel="stylesheet" href="navigationbar.css"/>
     <link rel="stylesheet" href="frontpage.css">
@@ -55,12 +55,12 @@
 
   <section class="product-container">
     <div class="product-image">
-      <img src="jeans.jpg" alt="Blue Denim Jeans">
+      <img src="tshirt.jpg" alt="Green T-Shirt">
     </div>
 
     <div class="product-details">
-      <h2>Classic Fit Jeans</h2>
-      <p>Premium blue denim jeans crafted for comfort and durability. Ideal for both casual and semi-formal wear.</p>
+      <h2>T-Shirts</h2>
+      <p>Premium green T-shirt crafted for comfort and style. Perfect for casual outings.</p>
 
       <label for="size">Select Size:</label>
       <select id="size" name="size">
@@ -74,14 +74,14 @@
       <label for="quantity">Select Quantity:</label>
       <input type="number" id="quantity" name="quantity" value="1" min="1">
 
-       <div class="price" id="price-display">Total: Rs.2699</div>
+       <div class="price" id="price-display">Total: Rs.1499</div>
        <div class="add-to-cart" onclick="addToCart()">Add to Cart</div>
       <div id="confirmation-message" class="message">Item added to cart successfully!</div>
     </div>
   </section>
 
   <script>
-    const basePrice = 2699;
+    const basePrice = 1499;
     const quantityInput = document.getElementById('quantity');
     const priceDisplay = document.getElementById('price-display');
     const confirmationMessage = document.getElementById('confirmation-message');
