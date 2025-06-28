@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargo Pants - Men</title>
+  <link rel="stylesheet" href="buy-section.css">
+    <link rel="stylesheet" href="navigationbar.css"/>
+    <link rel="stylesheet" href="frontpage.css">
+</head>
+
+<body>
+    <header class="navbar">
+    <div class="logo"><a href="index.html"><img src="Attire logo.png" width="100" height="50"></a></div>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+    <ul class="nav-links" >
+  <li><a href="index.html#about">About</a></li>
+
+  <li class="dropdown">
+    <a href="Women.html">Women</a>
+    <ul class="dropdown-menu">
+      <li><a href="Women.html#casualwear">Casual Wear</a></li>
+      <li><a href="Women.html#formalwear">Formal Wear</a></li>
+      <li><a href="Women.html#accessories">Accessories</a></li>
+      <li><a href="Women.html#footwear">Footwear</a></li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a href="men.html">Men</a>
+    <ul class="dropdown-menu">
+      <li><a href="men.html#tshirts">T-Shirt</a></li>
+      <li><a href="men.html#pants">Pants</a></li>
+      <li><a href="men.html#formalwear">Formal Wear</a></li>
+      <li><a href="men.html#footwear">Footwear</a></li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a href="kids.html">Kids</a>
+    <ul class="dropdown-menu" type="menu">
+      <li><a href="kids.html#babywear">Babywear</a></li>
+      <li><a href="kids.html#uniforms">Uniforms</a></li>
+      <li><a href="kids.html#partyclothes">Party Clothes</a></li>
+    </ul>
+  </li>
+
+  <li><a href="index.html#specialdiscount">Offers</a></li>
+  <li><a href="#contact">Find Us</a></li>
+</ul>
+
+  </header>
+
+  <section class="product-container">
+    <div class="product-image">
+      <img src="Cargo.webp" alt="Cargo Pants">
+    </div>
+
+    <div class="product-details">
+      <h2>Cargo Pants</h2>
+      <p>These cargo pants are designed for both comfort and utility, featuring multiple pockets and a relaxed fit.</p>
+
+      <label for="size">Select Size:</label>
+      <select id="size" name="size">
+        <option value="">-- Select Size --</option>
+        <option value="S">Small</option>
+        <option value="M">Medium</option>
+        <option value="L">Large</option>
+        <option value="XL">Extra Large</option>
+      </select>
+
+      <label for="quantity">Select Quantity:</label>
+      <input type="number" id="quantity" name="quantity" value="1" min="1">
+
+       <div class="price" id="price-display">Total: Rs.3499</div>
+       <div class="add-to-cart" onclick="addToCart()">Add to Cart</div>
+      <div id="confirmation-message" class="message">Item added to cart successfully!</div>
+    </div>
+  </section>
+
+  <script>
+    const basePrice = 3499;
+    const quantityInput = document.getElementById('quantity');
+    const priceDisplay = document.getElementById('price-display');
+    const confirmationMessage = document.getElementById('confirmation-message');
+
+    function updatePrice() {
+      let quantity = parseInt(quantityInput.value);
+      if (isNaN(quantity) || quantity < 1) {
+        quantity = 1;
+        quantityInput.value = 1;
+      }
+      const total = basePrice * quantity;
+      priceDisplay.textContent = `Total: Rs.${total}`;
+    }
+
+    function addToCart() {
+      confirmationMessage.style.display = 'block';
+      setTimeout(() => {
+        confirmationMessage.style.display = 'none';
+      }, 3000);
+    }
+
+    quantityInput.addEventListener('input', updatePrice);
+    window.onload = updatePrice;
+  </script>
+<section id="contact" class="contact">
+        <h2><span>|</span> Connect With us</h2>
+        <div class="contact-content" bis_skin_checked="1">
+            <div class="contact-info" bis_skin_checked="1">
+                <h3>Address</h3>
+                <p>Rupandehi, Butwal, Nepal</p>
+                <h3>Email</h3>
+                <p><a href="mailto:abishaneupane589@gmail.com">abishaneupane589@gmail.com</a></p>
+            </div>
+            <div class="social-links" bis_skin_checked="1">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
