@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Attire</title>
-    <link rel="stylesheet" href="navigationbar.css"/>
     <link rel="stylesheet" href="frontpage.css">
+    <link rel="stylesheet" href="navigationbar.css"/>
+    <link rel="stylesheet" href="products.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header class="navbar">
@@ -50,27 +53,41 @@
 </ul>
 
   </header>
-  
-<div class="row">
-<div><img src="Homepage image.jpg" style="max-width: 100%; height: auto;"></div>
-</div>
 
 
-            </div>
-
-            <section class="home" id="hero-section">
+            <section class="hero" id="hero-section">
               <div class="hero-overlay">
             <div class="hero-text" bis_skin_checked="1">
                 <h1> The Attire - Feel Premium</h1>
-                <h2> <span style="color: #739e7a;">  Exclusive Collections </span></h2>
+                <h2> <span style="color: #739e7a;">Exclusive Collections </span></h2>
                 <p>Modern Fashion for Every Occasion</p>
             
-            <center><a href="#contact" class="cta-button">Order Now</a></center>
+            <a href="#contact" class="cta-button">Order Now</a>
           </div>
           </div>  
           </section>
-        </div>
     
+        <section class="featured-collection">
+  <h2 class="section-title">Featured Collection</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <a href="men-indianblazer.html"><img src="Indian Blazer.webp"></a>
+      <h3>Indian Blazer</h3>
+      <p>Rs.7779</p>
+    </div>
+    <div class="product-card">
+      <a href="women-kurtis.html"><img src="Kurtis.webp" alt="Product"></a>
+      <h3>Luxury Kurta</h3>
+      <p>Rs.6949</p>
+    </div>
+     <div class="product-card">
+      <a href="kids-nepalibhoto.html"><img src="bhoto.webp" alt="Bhoto for Kids"></a>
+      <h3>Nepali Bhoto</h3>
+      <p>Rs.1699</p>
+    </div>
+  </div>
+</section>
+
 
     <section id="about" class="about">
         <h2><span>|</span> About The Attire</h2>
@@ -95,31 +112,63 @@ Offer Image" style="width: 80%; height: 600px;
  border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
             </div>
                 <p>We are offering a special discount of 50% on all items for the first 100 customers. <br> Don't miss out on this limited-time offer!</p>
-                <a href="#contact" class="cta-button">Know More</a>
+                <a href="#newsletter" class="cta-button">Know More</a>
             </div> <br> <br>
             <div class="offer">
-                Sunday  and Saturday 40% discount on all items.
+                Sunday  and Saturday 10% discount on all items.
                 
                 <h1>  Opening time </h1>
-            <p> Sunday to friday At 7:00AM to 8:00PM</p>
+            <p> Open 24/7 At 7:00AM to 8:00PM</p>
             </div>
 
+     <section id="newsletter" class="newsletter">
+  <h2>Subscribe for Offers</h2>
+  <form id="subscribe-form">
+  <input type="email" id="email" required placeholder="Your email" />
+  <button type="submit">Subscribe</button>
+</form>
+<div id="thanks-msg" style="display:none; color:#739e7a; margin-top:1rem;">
+  Thank you for subscribing! Stay tuned for our latest offers and updates.
+</div>
+
+</section>
+
+
   <section id="contact" class="contact">
-        <h2><span>|</span> Connect With us</h2>
+        <h2><span>|</span> Connect With Us</h2>
         <div class="contact-content" bis_skin_checked="1">
             <div class="contact-info" bis_skin_checked="1">
                 <h3>Address</h3>
-                <p>Rupandehi, Butwal, Nepal</p>
+                <p>Butwal, Rupandehi, Nepal</p>
                 <h3>Email</h3>
                 <p><a href="mailto:abishaneupane589@gmail.com">abishaneupane589@gmail.com</a></p>
-            </div>
-            <div class="social-links" bis_skin_checked="1">
-                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                <h3>Contact</h3>
+                <p>+977 9748704440</p>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+  <p>© 2025 The Attire | Designed by Avengers (Abisha, Aayusha, Pratik)</p>
+</footer>
+
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  menuToggle.addEventListener('change', () => {
+    navLinks.style.display = menuToggle.checked ? 'flex' : 'none';
+  });
+</script>
+
+<script>
+document.getElementById("subscribe-form").addEventListener("submit", function (e) {
+  e.preventDefault(); // prevent page reload
+  document.getElementById("thanks-msg").style.display = "block";
+  this.reset(); // optional: clear the input
+});
+</script>
+
 
 </body>
 </html>
